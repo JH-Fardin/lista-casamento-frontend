@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Lista de Presentes</title>
-
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de pessoas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-  <h1>Lista de Presentes</h1>
-  <p>Escolha um presente para o nosso casamento.</p>
+    <h1>Confirmar presença</h1>
+    <p>marque a sua presença clicando em seu nome abaixo.</p>
+
+    <a href="pag02.html" class="nav-btn next">
+        <span>Presentes</span>
+        <span class="arrow">→</span>
+    </a>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Pesquisar nome...">
+        <button id="searchBtn">🔍</button>
+    </div>
 </header>
 
-<div class="container" id="giftList"></div>
+<div class="container" id="peopleList"></div>
 
 <footer>
-    <p>Caso queira nos presentear de outra forma entre em contato pelo Whatsapp.</br>Obrigado por fazer parte desse momento🤍</p>
+    <p>Se o seu nome não está aqui no site entre em contato pelo Whatsapp.<br>Obrigado por fazer parte desse momento🤍</p>
 </footer>
 
-<a href="https://wa.me/5528999349565" target="_blank" rel="noopener noreferrer" class="card_number">
-    <div>
-        <p><img class="icon" src="whatsapp.png" alt="Icone do Whatsapp">+55 28 999349565</p>
-    </div>
+<a href="https://wa.me/5528999349565" target="_blank" class="card_number">
+    <p><img class="icon" src="whatsapp.png">+55 28 999349565</p>
 </a>
 
 <script src="script.js"></script>
+<script>
+  confirmPresence();
+</script>
+
 </body>
 </html>

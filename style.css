@@ -9,10 +9,7 @@ header {
   color: white;
   text-align: center;
   padding: 30px;
-}
-
-header h1 {
-  margin: 0;
+  position: relative; /* 🔥 IMPORTANTE */
 }
 
 .container {
@@ -61,63 +58,112 @@ footer {
   color: #555;
 }
 
-.gift {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.gift-info h3 {
-  margin: 0;
-}
-
-.count {
-  display: block;
-  margin-top: 3px;
-  font-size: 14px;
-  color: #2d6a4f;
-}
-
 .icon {
-    height: 30px;
-    width: 30px;
+  height: 30px;
+  width: 30px;
 }
 
 .card_number {
   text-decoration: none;
-  cursor: pointer;
-
   background: linear-gradient(135deg, #32cd32, #228b22);
   border-radius: 10px;
-
   padding: 6px 12px;
-  margin: 8px auto;
-
+  margin: 10px auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
-
   width: fit-content;
-
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
-
   color: white;
   font-size: 13px;
-
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card_number:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+.btn_next::after { content: "→"; }
+.btn_volt::after { content: "←"; }
+
+.search-box {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
 }
 
-.card_number::before {
-  content: "";
+.search-box input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  width: 200px;
+}
+
+.search-box button {
+  background: #2ecc71;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: white;
+}
+
+.search-box button:hover {
+  background: #27ae60;
+}
+
+.gift-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.status {
+  font-size: 13px;
+  color: #2ecc71;
+  margin-top: 4px;
+}
+
+.reserved {
+  border-left: 5px solid #2ecc71;
+}
+
+.nav-btn {
   position: absolute;
-  inset: 0;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.05);
-  pointer-events: none;
+  top: 15px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 14px;
+  border-radius: 30px;
+
+  background: linear-gradient(135deg, #4CAF50, #2ecc71);
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+}
+
+.nav-btn .arrow {
+  font-size: 18px;
+}
+
+/* posição */
+.nav-btn.next {
+  right: 15px;
+}
+
+.nav-btn.back {
+  left: 15px;
+}
+
+/* hover */
+.nav-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+/* clique */
+.nav-btn:active {
+  transform: scale(0.95);
 }
