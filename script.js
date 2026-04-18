@@ -1,5 +1,5 @@
 const APIpresent = "https://lista-presentes-0jfc.onrender.com/gifts";
-const APIpeople = "http://localhost:3000/peoples";
+const APIpeople = "https://lista-presentes-0jfc.onrender.com/peoples";
 
 // =========================
 // 🎁 GIFTS
